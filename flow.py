@@ -26,9 +26,10 @@ class Api:
 if __name__ == '__main__':
     api = Api()
 
-    window = webview.create_window('',
+    window = webview.create_window('flow',
                                    "html/index.html",
                                    js_api=api,
                                    width=int(window_height * 1.6), height=window_height,
-                                   on_top=True)
-    webview.start(window)
+                                   on_top=True,
+                                   resizable=False)
+    webview.start()
